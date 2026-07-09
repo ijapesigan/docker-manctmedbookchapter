@@ -1,0 +1,43 @@
+ijapesigan/manctmedbookchapter
+================
+Ivan Jacob Agaloos Pesigan
+2026-07-09
+
+<!-- README.md is generated from .setup/readme/README.Rmd. Please edit that file -->
+
+<!-- badges: start -->
+
+[![Make
+Project](https://github.com/ijapesigan/docker-manctmedbookchapter/actions/workflows/make.yml/badge.svg)](https://github.com/ijapesigan/docker-manctmedbookchapter/actions/workflows/make.yml)
+[![Docker Build and Push
+\[multi\]](https://github.com/ijapesigan/docker-manctmedbookchapter/actions/workflows/docker-build-push-multi.yml/badge.svg)](https://github.com/ijapesigan/docker-manctmedbookchapter/actions/workflows/docker-build-push-multi.yml)
+[![Shell
+Check](https://github.com/ijapesigan/docker-manctmedbookchapter/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/ijapesigan/docker-manctmedbookchapter/actions/workflows/shellcheck.yml)
+<!-- badges: end -->
+
+## Description
+
+A Docker container for `R` projects based on the [Rocker
+Project](https://rocker-project.org/).
+
+## Docker Container
+
+To launch `Rstudio Server`, run the following.
+
+``` bash
+docker run --rm -ti -e PASSWORD=yourpassword -p 127.0.0.1:8787:8787 ijapesigan/manctmedbookchapter
+```
+
+Open `http://localhost:8787` on your web browser to launch
+`Rstudio Server`.
+
+- username: rstudio
+- password: yourpassword
+
+## Apptainer Container
+
+To build the Singularity Image File (SIF), run the following.
+
+``` bash
+apptainer pull manctmedbookchapter.sif docker://ijapesigan/manctmedbookchapter:latest
+```
